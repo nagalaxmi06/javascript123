@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+      let a1 =prompt()
+      document.write(a1,"<br>")
+        let a2=prompt()
+        document.write(a1+a2,"<br")
+      a=prompt("Enter your name?")
+        alert(a)
+       alert("harshitha")
+        document.write(alert)
+        let aa=prompt("enter your name")
+        alert(`my name is :${aa}`)
+       t t=40
+       let r=(t>4)?'Ac-off': 'Ac-on'
+       document.write(r,'<br>')
+       let a=5
+       let b=2
+      /a++
+       b--
+      a+=40
+      b-=5
+       document.write(b,"<br>")
+       document.write(a,"<br>")
+       document.write(a/b,"<br>")
+       document.write(a%b)
+       document.write(a>b && a>2 ,"<br>")
+       document.write(a>b && a>12 ,"<br>")
+       document.write(a>b || a>12 ,"<br>")
+       document.write((a>12) ,"<br>")
+      /* document.write((a==b) ,"<br>")
+       document.write((a!=b) ,"<br>")
+       document.write((a===b) ,"<br>")
+       document.write((a!==b) ,"<br>")*/
+  </script>
+</body>
+</html>
