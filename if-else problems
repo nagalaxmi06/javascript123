@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> //number divisible by 2 or 3
+          let a =parseInt(prompt("Enter the number: "))
+          if(a%2==0 && a%3 == 0){
+            document.write("divisible by both");
+          }else if(a%2==0){
+            document.write("divisible by 2");
+          }else if(a%3 == 0){
+            document.write("divisible by 3");
+          }else{
+            docoment.write("can't divisible by both")
+          }
+          //largest number 
+          let a = parseInt(prompt("Enter the number a"))
+          let b = parseInt(prompt("Enter the number b"))
+          let c = parseInt(prompt("Enter the number c"))
+          if(a>b && a>c){
+             document.write("a is the largest number")
+          }else if(b>a && b>c){
+            document.write(" b is the largest number")
+          }else if(c>a && c>b){
+            document.write("c is the largest number")
+          }
+
+          //percentage of class attendance
+
+          let working_days =parseInt(prompt("Enter total no of the working_days"))
+          let absent_days =parseInt(prompt("Enter total no of  absent days"))
+          let total_days  =working_days-absent_days
+          let percentage = (total_days/working_days)*100
+          if(percentage > 75){
+            document.write("you are eligible for this exam" )
+          }else{
+            document.write("you are not eligible for this exam")
+          }
+          
+  </script>
+    
+</body>
+</html>
