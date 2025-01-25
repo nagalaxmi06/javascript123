@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* ### callback function: 
+         we can pass callback function as an argument to another function
+         execution:
+         the function  which is receving the callback will execute the callback at some point during execute (often
+         */
+         /*function mainfunction(callback){
+            console.log("executing main function")
+            callback()
+         }
+         function callbackfunction(){
+            console.log("callback function executed ")
+         }
+         mainfunction(callbackfunction);*/
+         /*exp:
+            mainfunction takes parameter as a callback
+            callback function is passed as an argument to the main function
+            mainfunction(callbackfunction);
+            it will code inside the main function
+           "executing main function":
+            then it reaches to callback();where it calls the function
+            which is passed to main function  
+         */
+        /* function goodbye(){
+            console.log("goodbye")
+         }
+         greet("pavani",goodbye);*/
+         /*####using an anonymous function as acallback ### 
+         */
+        /* function greet(name,callback){
+            console.log("hello" +name);
+            callback();
+         }
+         greet("harshitha",function(=>{
+            console.log("goodbye")
+         });*/
+       /* ## Asynchrones callback with set timeout###*/
+       /*function fetchData(callback){
+        document.write("Fetching data from the server... <br>");
+        setTimeout(function(){
+            document.write("Data fetched successfully!<br>");
+            callback()
+        },2000);
+    }
+    function processData(){
+        document.write("Processing the fetched data... <br>");
+    }
+    fetchData(processData);
+    function processcomData(){
+        document.write("Process is completed of the fetched data... <br>");
+    }
+    fetchData(processcomData);
+        /*code:
+        using callback with array method (map)
+         */const numbers = [1,2,3,4,5]
+const d = numbers.map(function(num){
+    return num*2
+    })
+    console.log(d)
+
+    //example//
+      function registeruser(username, email, callback) {
+        console.log("registering user" + username);
+        setTimeout(function () {
+          console.log("user" + username + "registered succesfully");
+          callback(email);
+        }, 2000);
+      }
+      function sendWelcomeEmail(email) {
+        console.log("sending welcome email to" + email);
+      }
+      registeruser("Harshith", "harshith123@gmail.com,sendWelcomeEmail");
+        
+    </script>
+    
+</body>
+</html>
