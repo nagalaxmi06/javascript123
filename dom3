@@ -1,0 +1,42 @@
+Insert before () :insert a new node before an existing node or child node of specific parentnode
+The require  areference to both the node new node an dexisting node to insert node
+Example:
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="a">
+    <h1 id="c"> Raquel</h1>
+    <div id="r">Naoh</div>
+</div>
+<div id="b">
+    <h1>Hash</h1>
+    <h1>Jay</h1>
+</div>
+<script>
+    let n = document.createElement("h2")
+    n.textContent = "Jennie"
+    let p = document.getElementById("a")
+    let l = document.getElementById("r")
+    p.insertBefore(n,l)
+    console.log(p)
+    let n1 = document.createElement("h2")
+    n1.textContent = "nagalaxmi"
+    let p1 = document.getElementById("a")
+    let l1 = document.getElementById("c")
+    p1.insertBefore(n1,l1)
+    console.log(p1)
+  let b=document.getElementById("b")
+     b.remove()
+
+    let n=document.getElementById("a")
+            let e=document.getElementById("re")
+
+            document.write(n)
+            n.removeChild(l)
+</script>    
+</html>
+
