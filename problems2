@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+    /*age=prompt("enter your age:")
+    citizen=prompt("enter yes if citizen or no:")
+    if(age>=18||citizen==true){
+        document.write("you are eligible to vote")
+    }else if(age<18){
+            document.write("you are not eligible")
+    }else{
+           document.write("you are not eligible")
+    }*/
+</script>
+<script>
+   /* let age = prompt("Enter the age");
+let citizen = prompt("Enter the citizenship");
+let cTest = prompt("Citizenship result");
+
+if((age >= 18) && (citizen=="Indian"||cTest =="Passed")){
+    document.write("Can eligible for voting");
+}
+else{
+    document.write("Cannot vote");
+}*/
+</script>
+<script>
+
+    let premiumMember = prompt("Enter if you have premium (yes/no):").toLowerCase();
+    let spend = Number(prompt("Enter the money spent to avail discount:"));
+    
+    if (spend > 100) {
+        if (premiumMember === 'yes') {
+            document.write("Gets 20% discount");
+        } else {
+            document.write("Gets 15% discount"); 
+        }
+    } else if (spend > 50) {
+        document.write("Gets 10% discount");
+    } else {
+        document.write("No discount available");
+    }
+
+    
+</script>
+    
+</body>
+</html>
