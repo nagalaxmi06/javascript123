@@ -1,0 +1,18 @@
+import React,{useState,useMemo} from 'react'
+
+const products=[
+  {id:1082,name:'Laptop',category:'Electronics'},
+  {id:3843,name:'Mobile',category:'Electronics'},
+  {id:9843,name:'Shoes',category:'Footwear'},
+  {id:2398,name:'Shirt',category:'Clothing'},
+  {id:9832,name:'Watch',category:'Accessories'}
+]
+function ProductSearch(){
+  const[searchQuery,setSearchQuery]=useState();
+  //function to filter products
+  //based on search query
+  const filterProducts=(query)=>{
+    products.name.toLowerCase().includes(query.toLowerCase())
+  }
+
+}
