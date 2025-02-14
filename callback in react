@@ -1,0 +1,120 @@
+reducer :
+a reducer is a function that helps to update 
+they are two states:
+current state 
+action
+
+import React,{useReducer} from "react";
+function appleReducer(state=0,action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return state+1;
+    case 'EAT_APPLE':
+      return state-1;
+    default:
+      return state;
+  }
+}
+
+function App(){
+  const[state,dispatch]=useReducer(appleReducer)
+  
+  return(
+    <div>
+      <h1>Apple Counter</h1>
+      <p>Number of apples:{state}</p>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>Add APPLE</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE</button>
+    </div>
+  )
+}
+export default App;*/
+
+with css styles:
+import React, { useReducer } from "react";
+
+function appleReducer(state, action) {
+  switch (action.type) {
+    case "ADD_APPLE":
+      return state + 1;
+    case "EAT_APPLE":
+      return state > 0 ? state - 1 : state; // Prevent negative apples
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = useReducer(appleReducer, 3); // Initial state explicitly set
+
+  const buttonStyle = {
+    width: "60px",
+    height: "60px",
+    border: "50%", // Makes button round
+    border: "none",
+    backgroundColor: "#ff4757",
+    color: "white",
+    fontSize: "14px",
+    fontWeight: "bold",
+    cursor: "pointer",
+    margin: "5px",
+    transition: "0.3s",
+  };
+
+  const eatButtonStyle = {
+    ...buttonStyle,
+    backgroundColor: "#1e90ff", // Different color for Eat button
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Apple Counter</h1>
+      <p style={{ fontSize: "20px" }}>Number of apples: {state}</p>
+      <button 
+        onClick={() => dispatch({ type: "ADD_APPLE" })} 
+        style={buttonStyle}
+      >
+        +
+      </button>
+      <button 
+        onClick={() => dispatch({ type: "EAT_APPLE" })} 
+        style={eatButtonStyle}
+        disabled={state === 0}
+      >
+        -
+      </button>
+    </div>
+  );
+}
+
+export default App;
+
+callback function:
+A callback function in React is a function passed as a prop from a parent component to a child component.
+The child can then call this function to communicate with the parent, allowing for event handling and state updates.
+
+import React , {useState}from 'react';
+import Child from './components/Child';
+const Parent=()=>{
+  const[message , setMessage]=useState('Hello World');
+  const changeMessage=()=>{
+    setMessage("You clicked the button")
+  };
+  return(
+    <div>
+      <h1>{message}</h1>
+      {/*passing the change message function as a prop to the child */}
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
+}
+export default Parent;
+import React from "react";
+const Child=({changeMessage})=>{
+    return(
+        <button onClick={changeMessage}> Click Me </button>
+
+    )
+}
+export default Child;
+
