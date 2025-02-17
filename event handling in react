@@ -1,0 +1,63 @@
+Event handling in react 
+Event handling in react its how you make your app do some thing when user interactive with it 
+Like clicking a button , submiiting a form 
+Pressing a key 
+Moving the mouse
+Typing a text box(on change)
+How to use events in react:
+Pass function to the event  to a function   
+function App(){
+  const handleClick =()=>{
+      alert("Button Clicked");
+  };
+  return(
+      <button onClick={handleClick}>CLICK ME!!</button>
+  )
+}
+export default App;
+Onchange  event
+It happen when use type in a text box
+Keys points:
+Target property of an event and is predefined by js for dom events
+Event. Target always refers the element that triggered the event
+Event. Target value used to access the values of input elements buttons  
+import React ,{useState}from 'react'
+
+function App(){
+  const[text,setText]=useState("")
+  //initially the value is set as empty string
+
+  const handleChange=(event)=>{
+    setText(event.target.value)
+    //update the text state with the value input field
+  }
+  return(
+    <div>
+      <input type='text' value={text} onChange={handleChange}/>
+      <p>your text:{text}</p>
+    </div>
+  )
+}
+export default App;
+
+
+import React , {useState} from 'react';
+function App(){
+    const[isHovered , setIsHovered]=useState(false);
+    const handleMouseEnter=()=>{
+        setIsHovered(true);
+    }
+    const handleMouseLeave=()=>{
+        setIsHovered(false);
+    }
+    return(
+        <div>
+            <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{backgroundColor:'isHovered'?'red':'cadetblue' , color:'isHovered'?'white':'blue'}}>Hover this</button>
+            {isHovered && <p>Mouse is over the button</p>}
+            
+        </div>
+    )
+}
+export default App;
+
+
