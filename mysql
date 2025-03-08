@@ -1,0 +1,83 @@
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| excelr             |
+| execelr            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.14 sec)
+ use excelr;
+Database changed
+mysql> select *from mobiles;
++----+---------+-------+--------------------------------------------------------------------------------------------------------------------+-----------+
+| id | pname   | pcost | pimage
+                    | pquantity |
++----+---------+-------+--------------------------------------------------------------------------------------------------------------------+-----------+
+|  1 | mobile1 | 10000 | https://5.imimg.com/data5/SELLER/Default/2021/9/HR/PW/SE/32162519/vivo-mobile-phone.png                            |         1 |
+|  2 | mobile2 | 12000 | https://www.top10mobileshop.com/images/top10mobiles.com/thumbnail/product/2024/08/795330468202408120724.jpg        |         2 |
+|  3 | mobile3 | 12000 | https://darlingretail.com/cdn/shop/products/1_374aeb0b-d682-4d82-9e4f-114cbed83e9d_600x.jpg?v=1661582861           |         2 |
+|  4 | mobile4 | 12000 | https://buy.budli.in/cdn/shop/files/123_c678ba67-62df-4235-9811-73ec8064ce33.jpg?v=1740144151&width=533            |         2 |
+|  5 | mobile5 | 15000 | https://media.viveks.com/media/catalog/product/cache/43c523c8c25ec73ea5fa54c25c6f766c/6/1/61_czeoob1l._sl1200_.jpg |         2 |
++----+---------+-------+--------------------------------------------------------------------------------------------------------------------+-----------+
+5 rows in set (0.06 sec)
+create table laptops(id int primary key,pname varchar(50),pcost int, pimage varchar(200),pqty int);
+Query OK, 0 rows affected (0.10 sec)
+ insert into laptops values(1,'laptops1',30000,'https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop1.jpeg',1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into laptops values(2,'laptops2',31000,'https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop2.jpeg',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into laptops values(3,'laptops3',31000,'https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop3.jpeg',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into laptops values(4,'laptops4',35000,'https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop4.jpeg',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into laptops values(5,'laptops5',36000,'https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop.jpeg',1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from laptops;
++----+----------+-------+----------------------------------------------------------------+------+
+| id | pname    | pcost | pimage                                                         | pqty |
++----+----------+-------+----------------------------------------------------------------+------+
+|  1 | laptops1 | 30000 | https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop1.jpeg |    1 |
+|  2 | laptops2 | 31000 | https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop2.jpeg |    2 |
+|  3 | laptops3 | 31000 | https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop3.jpeg |    2 |
+|  4 | laptops4 | 35000 | https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop4.jpeg |    2 |
+|  5 | laptops5 | 36000 | https://ecommproject1.s3.eu-north-1.amazonaws.com/laptop.jpeg  |    1 |
++----+----------+-------+----------------------------------------------------------------+------+
+5 rows in set (0.00 sec)
+ create table watches(id int primary key,pname varchar(50),pcost int, pimage varchar(200),pqty int);
+Query OK, 0 rows affected (0.06 sec)
+ insert into watches values(1,'watch1',36000,'https://ecommbat.s3.eu-north-1.amazonaws.com/watch1.jpeg',1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into watches values(2,'watch2',30000,'https://ecommbat.s3.eu-north-1.amazonaws.com/watch2.jpeg',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into watches values(3,'watch3',30000,'https://ecommbat.s3.eu-north-1.amazonaws.com/watch3.jpeg ',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into watches values(4,'watch4',30300,'https://ecommbat.s3.eu-north-1.amazonaws.com/watch4.jpeg ',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into watches values(5,'watch5',30300,'https://ecommbat.s3.eu-north-1.amazonaws.com/watch5.jpeg ',2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from watches;
++----+--------+-------+-----------------------------------------------------------+------+
+| id | pname  | pcost | pimage                                                    | pqty |
++----+--------+-------+-----------------------------------------------------------+------+
+|  1 | watch1 | 36000 | https://ecommbat.s3.eu-north-1.amazonaws.com/watch1.jpeg  |    1 |
+|  2 | watch2 | 30000 | https://ecommbat.s3.eu-north-1.amazonaws.com/watch2.jpeg  |    2 |
+|  3 | watch3 | 30000 | https://ecommbat.s3.eu-north-1.amazonaws.com/watch3.jpeg  |    2 |
+|  4 | watch4 | 30300 | https://ecommbat.s3.eu-north-1.amazonaws.com/watch4.jpeg  |    2 |
+|  5 | watch5 | 30300 | https://ecommbat.s3.eu-north-1.amazonaws.com/watch5.jpeg  |    2 |
++----+--------+-------+-----------------------------------------------------------+------+
+5 rows in set (0.00 sec)
